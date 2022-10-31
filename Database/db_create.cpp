@@ -4,10 +4,10 @@ using namespace std;
 int main(){
   MYSQL *conn;
   MYSQL_ROW row;
-    MYSQL_RES* res;
-    int qstate;
+  MYSQL_RES* res;
+  int qstate;
   conn = mysql_init(0);
-  conn = mysql_real_connect(conn, "sql6.freemysqlhosting.net", "sql6449193", "hHQdh26Iai", "sql6449193", 0, NULL, 0);
+  conn = mysql_real_connect(conn, "localhost", "testuser", "test", "oops2022", 0, NULL, 0);
   if (conn){
     cout<<"Connected"<<endl;
         qstate = mysql_query(conn,"CREATE TABLE Student(StudentID int,Name text,Marks int)");
